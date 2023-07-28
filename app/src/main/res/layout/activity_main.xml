@@ -58,10 +58,11 @@
                     android:id="@+id/right_first_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
                     android:autofillHints="0"
-                    android:text="@string/_0"/>
+                    android:ems="10"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:text="@string/_0" />
 
             </LinearLayout>
 
@@ -80,10 +81,11 @@
                     android:id="@+id/right_second_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
                     android:autofillHints="0"
-                    android:text="@string/_0"/>
+                    android:ems="10"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:text="@string/_0" />
 
             </LinearLayout>
 
@@ -102,10 +104,11 @@
                     android:id="@+id/right_third_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
                     android:autofillHints="0"
-                    android:text="@string/_0"/>
+                    android:ems="10"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:text="@string/_0" />
 
             </LinearLayout>
 
@@ -115,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingTop="45dp"
+                android:paddingTop="20dp"
                 android:text="0.0"
                 android:textSize="20sp" />
 
@@ -152,10 +155,11 @@
                     android:id="@+id/left_first_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
                     android:autofillHints="0"
-                    android:text="@string/_0"/>
+                    android:ems="10"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:text="@string/_0" />
 
             </LinearLayout>
 
@@ -174,10 +178,11 @@
                     android:id="@+id/left_second_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
                     android:autofillHints="0"
-                    android:text="@string/_0"/>
+                    android:ems="10"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:text="@string/_0" />
 
             </LinearLayout>
 
@@ -196,10 +201,11 @@
                     android:id="@+id/left_third_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number"
                     android:autofillHints="0"
-                    android:text="@string/_0"/>
+                    android:ems="10"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:text="@string/_0" />
 
             </LinearLayout>
 
@@ -208,7 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingTop="45dp"
+                android:paddingTop="20dp"
                 android:text="0.0"
                 android:textSize="20sp" />
 
@@ -223,8 +229,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginTop="45dp"
-        android:text="Calculate"
+        android:layout_marginTop="20dp"
+        android:text="@string/calculate"
         android:onClick="calculateClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -2,6 +2,8 @@ package com.example.gripcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,23 +51,41 @@ public class MainActivity extends AppCompatActivity {
         String r2 = rightTwo.getText().toString();
         String r3 = rightThree.getText().toString();
 
-        double leftFirst = Double.parseDouble(l1);
-        double leftSecond = Double.parseDouble(l2);
-        double leftThird = Double.parseDouble(l3);
+        if (l1.trim().isEmpty() || l2.trim().isEmpty() || l3.trim().isEmpty() || r1.trim().isEmpty()
+                || r2.trim().isEmpty() || r3.trim().isEmpty()) {
+            AlertDialog alert = new AlertDialog.Builder(this).create();
+            alert.setTitle("Error");
+            alert.setMessage("Please do not leave blank fields.");
+            alert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+            alert.show();
+        } else {
 
-        double rightFirst = Double.parseDouble(r1);
-        double rightSecond = Double.parseDouble(r2);
-        double rightThird = Double.parseDouble(r3);
+            double leftFirst = Double.parseDouble(l1);
+            double leftSecond = Double.parseDouble(l2);
+            double leftThird = Double.parseDouble(l3);
 
-        double leftAverage = (leftFirst + leftSecond + leftThird)/3;
-        double leftTwoDecimal = Math.round(leftAverage * 100.0)/100.0;
-        String leftFinal = Double.toString(leftTwoDecimal);
-        leftAvg.setText(leftFinal);
+            double rightFirst = Double.parseDouble(r1);
+            double rightSecond = Double.parseDouble(r2);
+            double rightThird = Double.parseDouble(r3);
 
-        double rightAverage = ((rightFirst + rightSecond + rightThird)/3);
-        double rightTwoDecimal = Math.round(rightAverage * 100.0)/100.0;
-        String rightFinal = Double.toString(rightTwoDecimal);
-        rightAvg.setText(rightFinal);
+            double leftAverage = (leftFirst + leftSecond + leftThird) / 3;
+            double leftTwoDecimal = Math.round(leftAverage * 100.0) / 100.0;
+            String leftFinal = Double.toString(leftTwoDecimal);
+
+            double rightAverage = ((rightFirst + rightSecond + rightThird) / 3);
+            double rightTwoDecimal = Math.round(rightAverage * 100.0) / 100.0;
+            String rightFinal = Double.toString(rightTwoDecimal);
+
+
+            leftAvg.setText(leftFinal);
+            rightAvg.setText(rightFinal);
+        }
     }
 
 
