@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GripCalculator</string>
+    <string name="third">Third</string>
+    <string name="second">Second</string>
+    <string name="first">First</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="grip_calculator">Grip Calculator</string>
+    <string name="_0">0</string>
+</resources>
