@@ -8,9 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
-
-import java.util.Formatter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
     EditText leftThree;
     TextView rightAvg;
     TextView leftAvg;
+    RadioButton bilateralRadioButton;
+    RadioButton unilateralRadioButton;
+    TextView rightTextView;
+    TextView leftTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +42,15 @@ public class MainActivity extends AppCompatActivity {
         leftThree = findViewById(R.id.left_third_edit_text);
         rightAvg = findViewById(R.id.right_avg);
         leftAvg = findViewById(R.id.left_avg);
+        bilateralRadioButton = findViewById(R.id.bilateral_radio_button);
+        unilateralRadioButton = findViewById(R.id.unilateral_radio_button);
+        rightTextView = findViewById(R.id.right_text_view);
+        leftTextView = findViewById(R.id.left_text_view);
 
 
     }
 
-    public void doCalculation() {
+    public void doBilateralCalculation() {
 
         String l1 = leftOne.getText().toString();
         String l2 = leftTwo.getText().toString();
@@ -55,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 || r2.trim().isEmpty() || r3.trim().isEmpty()) {
             AlertDialog alert = new AlertDialog.Builder(this).create();
             alert.setTitle("Error");
-            alert.setMessage("Please do not leave blank fields.");
+            alert.setMessage("Please fill in all blanks.");
             alert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                     new DialogInterface.OnClickListener() {
                         @Override
@@ -90,8 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     public void calculateClick(View view) {
-        doCalculation();
+        doBilateralCalculation();
     }
 }

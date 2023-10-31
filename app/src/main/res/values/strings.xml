@@ -8,4 +8,6 @@
     <string name="grip_calculator">Grip Calculator</string>
     <string name="_0">0</string>
     <string name="calculate">Calculate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
