@@ -27,13 +27,15 @@ public class MainActivity extends AppCompatActivity {
     TextView rightTextView;
     TextView leftTextView;
 
+    Boolean isUni = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mButton = (Button)findViewById(R.id.calculate_button);
+        mButton = findViewById(R.id.calculate_button);
         rightOne = findViewById(R.id.right_first_edit_text);
         rightTwo = findViewById(R.id.right_second_edit_text);
         rightThree = findViewById(R.id.right_third_edit_text);
@@ -43,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
         rightAvg = findViewById(R.id.right_avg);
         leftAvg = findViewById(R.id.left_avg);
         bilateralRadioButton = findViewById(R.id.bilateral_radio_button);
+
         unilateralRadioButton = findViewById(R.id.unilateral_radio_button);
         rightTextView = findViewById(R.id.right_text_view);
         leftTextView = findViewById(R.id.left_text_view);
-
-
     }
+
 
     public void doBilateralCalculation() {
 
@@ -96,9 +98,71 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void doUnilateralCalculation() {
+
+        String r1 = rightOne.getText().toString();
+        String r2 = rightTwo.getText().toString();
+        String r3 = rightThree.getText().toString();
+
+        if (r1.trim().isEmpty() || r2.trim().isEmpty() || r3.trim().isEmpty()) {
+            AlertDialog alert = new AlertDialog.Builder(this).create();
+            alert.setTitle("Error");
+            alert.setMessage("Please fill in all blanks.");
+            alert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+            alert.show();
+        } else {
+
+            double rightFirst = Double.parseDouble(r1);
+            double rightSecond = Double.parseDouble(r2);
+            double rightThird = Double.parseDouble(r3);
+
+            double rightAverage = ((rightFirst + rightSecond + rightThird) / 3);
+            double rightTwoDecimal = Math.round(rightAverage * 100.0) / 100.0;
+            String rightFinal = Double.toString(rightTwoDecimal);
+
+            rightAvg.setText(rightFinal);
+        }
+    }
 
 
     public void calculateClick(View view) {
-        doBilateralCalculation();
+        if (isUni){
+            doUnilateralCalculation();
+        } else {
+            doBilateralCalculation();
+        }
+    }
+
+    public void bilatRadioListener(View view) {
+        rightTextView.setText("RIGHT");
+        leftTextView.setText("LEFT");
+        leftAvg.setText("0.0");
+        leftOne.setEnabled(true);
+        leftTwo.setEnabled(true);
+        leftThree.setEnabled(true);
+        System.out.println(isUni);
+        isUni = false;
+        System.out.println(isUni);
+    }
+
+    public void uniRadioListener(View view) {
+        rightTextView.setText("Hand");
+        leftTextView.setText(" ");
+        leftAvg.setText(" ");
+        leftOne.getText().clear();
+        leftTwo.getText().clear();
+        leftThree.getText().clear();
+        leftOne.setEnabled(false);
+        leftTwo.setEnabled(false);
+        leftThree.setEnabled(false);
+        System.out.println(isUni);
+        isUni = true;
+        System.out.println(isUni);
     }
 }

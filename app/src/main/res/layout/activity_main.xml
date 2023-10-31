@@ -28,18 +28,20 @@
         app:layout_constraintTop_toBottomOf="@+id/title_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
         <RadioButton
             android:id="@+id/bilateral_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bilateral"
             android:checked="true"
-            />
+            android:onClick="bilatRadioListener"
+            android:text="Bilateral" />
         <RadioButton
             android:id="@+id/unilateral_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Unilateral"
+            android:onClick="uniRadioListener"
             android:layout_marginStart="50dp"/>
     </RadioGroup>
 
