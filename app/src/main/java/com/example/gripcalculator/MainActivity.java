@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         mButton = findViewById(R.id.calculate_button);
         rightOne = findViewById(R.id.right_first_edit_text);
         rightTwo = findViewById(R.id.right_second_edit_text);
@@ -156,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void uniRadioListener(View view) {
-        rightTextView.setText("Hand");
+        rightTextView.setText("HAND");
         leftTextView.setText(" ");
         leftAvg.setText(" ");
         leftOne.getText().clear();
