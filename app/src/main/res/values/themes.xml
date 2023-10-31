@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.GripCalculator" parent="Base.Theme.GripCalculator" />
+
+
 </resources>
