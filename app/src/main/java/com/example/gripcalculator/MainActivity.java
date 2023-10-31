@@ -146,6 +146,9 @@ public class MainActivity extends AppCompatActivity {
         leftOne.setEnabled(true);
         leftTwo.setEnabled(true);
         leftThree.setEnabled(true);
+        leftOne.setText("0");
+        leftTwo.setText("0");
+        leftThree.setText("0");
         System.out.println(isUni);
         isUni = false;
         System.out.println(isUni);
