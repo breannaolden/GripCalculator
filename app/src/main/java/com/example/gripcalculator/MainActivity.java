@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.gripcalculator.R;
+
 public class MainActivity extends AppCompatActivity {
 
     Button mButton;
