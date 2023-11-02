@@ -84,7 +84,7 @@
                 <EditText
                     android:id="@+id/right_first_edit_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:autofillHints="0"
                     android:ems="10"
                     android:hint="@string/_0"
@@ -107,7 +107,7 @@
                 <EditText
                     android:id="@+id/right_second_edit_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:autofillHints="0"
                     android:ems="10"
                     android:hint="@string/_0"
@@ -130,7 +130,7 @@
                 <EditText
                     android:id="@+id/right_third_edit_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:autofillHints="0"
                     android:ems="10"
                     android:hint="@string/_0"
@@ -182,7 +182,7 @@
                 <EditText
                     android:id="@+id/left_first_edit_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:autofillHints="0"
                     android:ems="10"
                     android:hint="@string/_0"
@@ -205,7 +205,7 @@
                 <EditText
                     android:id="@+id/left_second_edit_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:autofillHints="0"
                     android:ems="10"
                     android:hint="@string/_0"
@@ -228,7 +228,7 @@
                 <EditText
                     android:id="@+id/left_third_edit_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:autofillHints="0"
                     android:ems="10"
                     android:hint="@string/_0"
@@ -252,17 +252,31 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/calculate_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="20dp"
-        android:text="@string/calculate"
-        android:onClick="calculateClick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout3">
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/calculate"
+            android:onClick="calculateClick"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/colorLight"
+            android:onClick="clearClick"/>
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

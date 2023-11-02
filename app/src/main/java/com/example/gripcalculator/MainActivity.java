@@ -170,4 +170,16 @@ public class MainActivity extends AppCompatActivity {
         isUni = true;
         System.out.println(isUni);
     }
+
+    public void clearClick(View view) {
+        if (!isUni) {
+            leftOne.getText().clear();
+            leftTwo.getText().clear();
+            leftThree.getText().clear();
+        }
+        rightOne.getText().clear();
+        rightTwo.getText().clear();
+        rightThree.getText().clear();
+
+    }
 }
