@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
+        android:contentDescription="grip calculator"
         android:text="@string/grip_calculator"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -34,15 +35,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:contentDescription="bilateral measurements"
             android:onClick="bilatRadioListener"
             android:text="Bilateral" />
+
         <RadioButton
             android:id="@+id/unilateral_radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unilateral"
+            android:layout_marginStart="50dp"
+            android:contentDescription="unilateral measurements"
             android:onClick="uniRadioListener"
-            android:layout_marginStart="50dp"/>
+            android:text="Unilateral" />
     </RadioGroup>
 
     <LinearLayout
@@ -79,6 +83,7 @@
                     android:id="@+id/right_first_text_view"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:contentDescription="right hand first measurement"
                     android:text="@string/first" />
 
                 <EditText
@@ -102,6 +107,7 @@
                     android:id="@+id/right_second_text_view"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:contentDescription="right hand second measurement"
                     android:text="@string/second" />
 
                 <EditText
@@ -125,6 +131,7 @@
                     android:id="@+id/right_third_text_view"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:contentDescription="right hand third measurement"
                     android:text="@string/third" />
 
                 <EditText
@@ -177,6 +184,7 @@
                     android:id="@+id/left_first_text_view"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:contentDescription="left hand first measurement"
                     android:text="@string/first" />
 
                 <EditText
@@ -200,6 +208,7 @@
                     android:id="@+id/left_second_text_view"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:contentDescription="left hand second measurement"
                     android:text="@string/second" />
 
                 <EditText
@@ -223,6 +232,7 @@
                     android:id="@+id/left_third_text_view"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:contentDescription="left hand third measurement"
                     android:text="@string/third" />
 
                 <EditText
@@ -263,17 +273,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="@string/calculate"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="calculate button"
             android:onClick="calculateClick"
-            android:layout_marginEnd="10dp"/>
+            android:text="@string/calculate" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear"
-            android:textColor="@color/black"
             android:backgroundTint="@color/colorLight"
-            android:onClick="clearClick"/>
+            android:contentDescription="clear content button"
+            android:onClick="clearClick"
+            android:text="Clear"
+            android:textColor="@color/black" />
 
 
     </LinearLayout>
