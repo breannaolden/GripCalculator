@@ -176,10 +176,14 @@ public class MainActivity extends AppCompatActivity {
             leftOne.getText().clear();
             leftTwo.getText().clear();
             leftThree.getText().clear();
+            rightAvg.setText("0.0");
+            leftAvg.setText("0.0");
         }
         rightOne.getText().clear();
         rightTwo.getText().clear();
         rightThree.getText().clear();
+        rightAvg.setText("0.0");
+
 
     }
 }
