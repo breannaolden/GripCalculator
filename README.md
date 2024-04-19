@@ -5,3 +5,5 @@ physical therapist using a Dynamometer. It takes three measurements from both ha
 an average of the three. It provides one average per hand. I created this app because it would
 have saved me time as a clinician to be able to enter this information as I received it from
 the patient and automatically get an average grip for documention. 
+
+Published on the Google Play store: https://play.google.com/store/apps/details?id=com.manapuasoftware.gripcalculator
